@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bt = new System.Windows.Forms.Button();
             this.cb = new System.Windows.Forms.ComboBox();
             this.data = new System.Windows.Forms.DataGridView();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pie = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pie)).BeginInit();
             this.SuspendLayout();
             // 
             // bt
@@ -95,22 +95,22 @@
             this.data.Size = new System.Drawing.Size(517, 276);
             this.data.TabIndex = 2;
             // 
-            // chart1
+            // pie
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(553, 75);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(246, 258);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            chartArea1.Name = "ChartArea1";
+            this.pie.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.pie.Legends.Add(legend1);
+            this.pie.Location = new System.Drawing.Point(553, 75);
+            this.pie.Name = "pie";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.pie.Series.Add(series1);
+            this.pie.Size = new System.Drawing.Size(246, 258);
+            this.pie.TabIndex = 3;
+            this.pie.Text = "chart1";
             // 
             // Form1
             // 
@@ -119,7 +119,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(811, 375);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.pie);
             this.Controls.Add(this.data);
             this.Controls.Add(this.cb);
             this.Controls.Add(this.bt);
@@ -127,7 +127,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,7 +137,7 @@
         private System.Windows.Forms.Button bt;
         private System.Windows.Forms.ComboBox cb;
         private System.Windows.Forms.DataGridView data;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pie;
     }
 }
 

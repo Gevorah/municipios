@@ -18,7 +18,10 @@ namespace municipios
         {
             InitializeComponent();
         }
+
+        //
         private DataTable dt = new DataTable();
+        //
 
         private void bt_Click(object sender, EventArgs e)
         {
@@ -38,10 +41,10 @@ namespace municipios
                         {
                             for(int i = 0; i < sl.Length; i++)
                             {
-                                dt.Columns.Add(sl[i]);
+                                dt.Columns.Add(sl[i]); 
                             }
                             f = false;
-                        }else dt.Rows.Add(sl);
+                        } else dt.Rows.Add(sl);
                     }
                     data.DataSource = dt;
                 }
@@ -50,11 +53,10 @@ namespace municipios
 
                 }
             }
-
         }
         private void cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dt.DefaultView.RowFilter = string.Format("Convert([{0}], 'System.String') LIKE '{1}*'", "Nombre Municipio", cb.Text);
+            dt.DefaultView.RowFilter = string.Format("Convert([{0}], 'System.String') LIKE '{1}*'", "Nombre Departamento", cb.Text);
         }
     }
 
