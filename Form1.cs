@@ -18,10 +18,11 @@ namespace municipios
         {
             InitializeComponent();
         }
+        private DataTable dt = new DataTable();
 
         private void bt_Click(object sender, EventArgs e)
         {
-            var fd = new OpenFileDialog();
+            OpenFileDialog fd = new OpenFileDialog();
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 string file = fd.FileName;
@@ -35,10 +36,14 @@ namespace municipios
                         string[] sl = line.Split(',');
                         if (f == true)
                         {
-                            data.ColumnCount = sl.Length;
+                            for(int i = 0; i < sl.Length; i++)
+                            {
+                                dt.Columns.Add(sl[i]);
+                            }
                             f = false;
-                        }else data.Rows.Add(sl);
+                        }else dt.Rows.Add(sl);
                     }
+                    data.DataSource = dt;
                 }
                 catch(IOException)
                 {
@@ -49,7 +54,7 @@ namespace municipios
         }
         private void cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Hola");
+            dt.DefaultView.RowFilter = string.Format("Convert([{0}], 'System.String') LIKE '{1}*'", "Nombre Municipio", cb.Text);
         }
     }
 
