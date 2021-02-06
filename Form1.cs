@@ -19,7 +19,7 @@ namespace municipios
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_Click(object sender, EventArgs e)
         {
             var fd = new OpenFileDialog();
             if (fd.ShowDialog() == DialogResult.OK)
@@ -27,12 +27,17 @@ namespace municipios
                 string file = fd.FileName;
                 try
                 {
-                    string txt = File.ReadAllText(file);
-                    var sr = new StreamReader(file);
+                    StreamReader sr = new StreamReader(file);
                     string line;
+                    bool f = true;
                     while((line = sr.ReadLine()) != null)
                     {
                         string[] sl = line.Split(',');
+                        if (f == true)
+                        {
+                            data.ColumnCount = sl.Length;
+                            f = false;
+                        }else data.Rows.Add(sl);
                     }
                 }
                 catch(IOException)
@@ -42,8 +47,10 @@ namespace municipios
             }
 
         }
+        private void cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("Hola");
+        }
     }
-
-    
 
 }

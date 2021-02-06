@@ -28,39 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bt = new System.Windows.Forms.Button();
+            this.cb = new System.Windows.Forms.ComboBox();
+            this.data = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // bt
             // 
-            this.button1.Location = new System.Drawing.Point(347, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "File upload";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bt.Location = new System.Drawing.Point(347, 11);
+            this.bt.Margin = new System.Windows.Forms.Padding(2);
+            this.bt.Name = "bt";
+            this.bt.Size = new System.Drawing.Size(71, 29);
+            this.bt.TabIndex = 0;
+            this.bt.Text = "File upload";
+            this.bt.UseVisualStyleBackColor = true;
+            this.bt.Click += new System.EventHandler(this.bt_Click);
             // 
-            // comboBox1
+            // cb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Letter";
+            this.cb.FormattingEnabled = true;
+            this.cb.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.cb.Location = new System.Drawing.Point(23, 48);
+            this.cb.Name = "cb";
+            this.cb.Size = new System.Drawing.Size(121, 21);
+            this.cb.TabIndex = 1;
+            this.cb.Text = "Letter";
             // 
-            // dataGridView1
+            // data
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 276);
-            this.dataGridView1.TabIndex = 2;
+            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data.Location = new System.Drawing.Point(23, 87);
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(610, 276);
+            this.data.TabIndex = 2;
             // 
             // Form1
             // 
@@ -68,22 +95,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(716, 375);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.data);
+            this.Controls.Add(this.cb);
+            this.Controls.Add(this.bt);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button bt;
+        private System.Windows.Forms.ComboBox cb;
+        private System.Windows.Forms.DataGridView data;
     }
 }
 
