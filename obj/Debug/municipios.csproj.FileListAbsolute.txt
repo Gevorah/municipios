@@ -1,0 +1,10 @@
+C:\Users\Aspire F 15\Desktop\municipios\bin\Debug\municipios.exe.config
+C:\Users\Aspire F 15\Desktop\municipios\bin\Debug\municipios.exe
+C:\Users\Aspire F 15\Desktop\municipios\bin\Debug\municipios.pdb
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.csprojAssemblyReference.cache
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.Form1.resources
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.Properties.Resources.resources
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.csproj.GenerateResource.cache
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.csproj.CoreCompileInputs.cache
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.exe
+C:\Users\Aspire F 15\Desktop\municipios\obj\Debug\municipios.pdb

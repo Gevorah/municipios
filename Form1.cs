@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace municipios
 {
@@ -19,7 +21,29 @@ namespace municipios
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var fd = new OpenFileDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                string file = fd.FileName;
+                try
+                {
+                    string txt = File.ReadAllText(file);
+                    var sr = new StreamReader(file);
+                    string line;
+                    while((line = sr.ReadLine()) != null)
+                    {
+                        string[] sl = line.Split(',');
+                    }
+                }
+                catch(IOException)
+                {
+
+                }
+            }
 
         }
     }
+
+    
+
 }
